@@ -1,0 +1,6 @@
+interface=wlan0
+driver=nl80211
+
+ssid=your_ssid_name_here
+
+channel=11

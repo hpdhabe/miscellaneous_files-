@@ -1,0 +1,25 @@
+interface=wlan0
+driver=nl80211
+
+ssid=your_ssid_name_here
+
+hw_mode=g
+channel=11
+ieee80211n=1
+wmm_enabled=1
+ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
+macaddr_acl=0
+auth_algs=1
+ieee8021x=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_key_mgmt=WPA-EAP
+rsn_pairwise=TKIP CCMP
+
+disable_pmksa_caching=0
+
+auth_server_addr=127.0.0.1
+auth_server_port=1812
+auth_server_shared_secret=your_shared_secret_here   
+#default_shared_secret=testing123
+

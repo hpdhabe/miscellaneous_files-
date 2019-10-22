@@ -1,0 +1,16 @@
+interface=wlan0
+driver=nl80211
+
+ssid=your_ssid_name_here
+
+channel=11
+
+auth_algs=3
+wep_default_key=0
+
+wep_key0=1234567890
+wep_key_len_unicast=5
+wep_key_len_broadcast=5
+wep_rekey_period=300
+
+# Not sure if this conf works :P

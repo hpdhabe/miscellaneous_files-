@@ -1,0 +1,11 @@
+interface=wlan0
+driver=nl80211
+
+ssid=your_ssid_name_here
+
+channel=11
+
+wpa=2
+wpa_key_mgmt=null
+wpa_key_mgmt=WPA-PSK
+wpa_passphrase=your_password_here
