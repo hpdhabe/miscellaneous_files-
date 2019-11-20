@@ -1,3 +1,47 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+Plugin 'vim-airline/vim-airline'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'dracula/vim', { 'name': 'dracula' }
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 let mapleader = "\\"
 set number 
 set ruler
@@ -10,13 +54,12 @@ set tabstop=4       " The width of a TAB is set to 4.
 
 set shiftwidth=4    " Indents will have a width of 4.
 set softtabstop=4   " Sets the number of columns for a TAB.
+set expandtab
 filetype indent on
-set cursorline
+"set cursorline
 set showcmd
-"colorscheme Mogao
 syntax on
 set autoindent
-
 
 nnoremap <silent> <leader>l :nohl<CR><leader>l                  "<leader>l redraws the screen and removes any search highlighting.
 
@@ -31,10 +74,7 @@ nnoremap <silent> <leader>l :nohl<CR><leader>l                  "<leader>l redra
 "vnoremap <C-c> "+y
 "map <C-p> "+p
 
-"to set indentation lines
-
-set listchars=tab:\|\  
-set list 
+colorscheme dracula
 
 " shortcut for splitting screens/windows
 
@@ -43,30 +83,26 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-j> <C-w>j
 
-" to map Enter, backpsace with new line in normal mode
-
-nmap <CR> o<Esc>
-nmap <BS> i<BS><ESC>l
-
 " saving files, saving files with/without tabs
 nnoremap <leader>wv :source $MYVIMRC<CR>        
 nnoremap <leader>w :w<cr> 
 inoremap <leader>w <esc>:w<cr>
 
 
+
 "setting timeout for esc key as 0
 set timeoutlen=1000 ttimeoutlen=0
 
 " set scrolling with cursor in middle
-set so=4 "short for set scrolloff=999  also zk/zj won't work in this mode. use ':set so=0' to exit this mode
+" set so=4 "short for set scrolloff=999  also zk/zj won't work in this mode. use ':set so=0' to exit this mode
 
 " tabs to spaces and spaces to tabs
 nnoremap <leader>t :set expandtab!<cr> <bar> w<cr>
 nnoremap <leader>nt :set expandtab<cr> <bar> w<cr>
 
 "putting the current line at various places on current screen
-nnoremap zj zb
-nnoremap zk zt
+"nnoremap zj zb
+"nnoremap zk zt
 
 "searching visually selected block with '//'
 vnoremap // y/<C-R>"<CR>
@@ -86,8 +122,6 @@ set tags=./tags;
 
 
 
-" for cscope
-cs add /Users/hurday/esp/esp-idf/cscope.out
 
 "cscope path to be relative
 "set cscoperelative
