@@ -26,7 +26,7 @@ Plugin 'vim-airline/vim-airline'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 Plugin 'user/L9', {'name': 'newL9'}
-Plugin 'dracula/vim', { 'name': 'dracula' }
+" Plugin 'dracula/vim', { 'name': 'dracula' }
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,6 +41,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set rtp+=~/.vim/plugin/.
 
 let mapleader = "\\"
 set number 
@@ -74,7 +76,6 @@ nnoremap <silent> <leader>l :nohl<CR><leader>l                  "<leader>l redra
 "vnoremap <C-c> "+y
 "map <C-p> "+p
 
-colorscheme dracula
 
 " shortcut for splitting screens/windows
 
@@ -130,3 +131,8 @@ set tags=./tags;
 "set cst
 "set csto=0
 "cs add cscope.out
+
+" The -c param will build an uncompressed version of cscope database which
+" will take some time but is required for cctree database generation. :shrug:
+map <F5> :!cscope -Rcb<CR>:!ctags -R<CR>:cs reset<CR><CR>
+map <F6> :CCTreeLoadDB ./cscope.out<CR><CR>
