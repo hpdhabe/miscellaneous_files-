@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/media/hruday/fast_mem/linux/drivers/accessibility/braille'
+let g:netrw_dirhist_5='/media/hruday/fast_mem/linux/drivers/accessibility'
+let g:netrw_dirhist_4='/media/hruday/fast_mem/linux/drivers'
+let g:netrw_dirhist_3='/media/hruday/fast_mem/linux'
+let g:netrw_dirhist_2='/media/hruday/fast_mem/linux/samples'
+let g:netrw_dirhist_1='/media/hruday/fast_mem/linux'
+let g:netrw_dirhist_0='/media/hruday/fast_mem/linux/arch/riscv/configs'
+let g:netrw_dirhist_9='/media/hruday/fast_mem/qemu'
+let g:netrw_dirhist_8='/media/hruday/fast_mem/qemu/softmmu'
+let g:netrw_dirhist_7='/media/hruday/fast_mem/qemu'
