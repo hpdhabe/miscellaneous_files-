@@ -46,6 +46,7 @@ set rtp+=~/.vim/plugin/.
 
 let mapleader = "\\"
 set number 
+set relativenumber
 set ruler
 set incsearch
 set hlsearch
